@@ -1,0 +1,766 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Akademik</title>
+    <link rel="website icon" type="png" 
+     href="foto logo&bg/graduation-hat.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="akademika.css">
+    <style>
+
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+    }
+
+    .navbar {
+      background-color: #f1f1f1;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 15px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #007bff;
+    }
+
+    .auth-buttons {
+      display: flex;
+      gap: 10px;
+    }
+
+    .btn-custom {
+      padding: 8px 16px;
+      border: 2px solid #007bff;
+      background-color: transparent;
+      color: #007bff;
+      border-radius: 20px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .btn-custom:hover {
+      background-color: #007bff;
+      color: white;
+    }
+    
+      .navbar a:hover {
+    color: blue;
+
+}
+
+        .card:hover {
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+            transform: translateY(-8px);
+         }
+
+        .card-img-top {
+             object-fit: cover;
+              height: 150px;
+        }
+
+    </style>
+
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg  sticky-top">
+      <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+              <img src="logotittle.png" alt="logo" width="80" height="auto">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="Lamanutama.html">Beranda</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="Pendaftaran.html"><span style="color: blue;">Pendaftaran</span></a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="Tentang.html">Tentang</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="Akademik.html"><b>Akademik</b></a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="Maba.html">Mahasiswa Baru</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      PPKMB Universitas Elang Kuasa
+                    </a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="Riwayat.html">Riwayat Pendaftaran</a></li>
+                        <li><a class="dropdown-item" href="biaya.html">Biaya Perkuliahan</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                      </ul>
+                  </li>
+              </li>
+              <div class="d-flex">
+                <a href="login.html" class="btn btn-custom me-2">Login</a>
+                <a href="daftar.html" class="btn btn-custom">Daftar</a>
+              </div>
+              </ul>
+          </div>
+      </div>
+  </nav>
+
+    <!-- Akademik Section -->
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="text-center mb-4">Akademik Universitas Elang Kuasa</h1>
+          <p class="lead text-center">Universitas Elang Kuasa menyediakan berbagai program akademik yang dirancang untuk mempersiapkan mahasiswa menghadapi tantangan global.</p>
+        </div>
+      </div>
+
+      <div class="row mt-5">
+        <div class="col-md-12">
+          <h2>Program Studi</h2>
+          <p>Universitas Elang Kuasa menawarkan berbagai program studi di tingkat sarjana, magister, dan doktoral. Berikut adalah daftar fakultas dan program studi yang tersedia:</p>
+          <section id="program-studi">
+            <div class="container"><br>
+                <h3>Fakultas Sains dan <span style="color: brown;">Teknologi</span></h3><br>
+                <div class="row row-cols-1 row-cols-md-4 g-4"> 
+
+                        <!-- Teknik Mesin -->
+                        <div class="col">
+                          <div class="card h-100 text-center clickable-card" data-bs-target="#modalTeknikMesin" style="cursor: pointer;">
+                            <img src="foto prodi/Teknik Mesin.png" class="card-img-top" alt="Teknik Mesin" style="max-width: 180px; margin: 0 auto;">
+                            <div class="card-body">
+                              <h5 class="card-title">Teknik Mesin</h5>
+                            </div>
+                          </div>
+                        </div>
+                      
+                        
+                        <div class="modal fade" id="modalTeknikMesin" tabindex="-1" aria-labelledby="modalLabelTeknikMesin" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="modalLabelTeknikMesin">Teknik Mesin</h5>
+                              </div>
+                              <div class="modal-body">
+                                Teknik Mesin adalah program studi yang mempelajari rekayasa mekanik, desain mesin, dan proses manufaktur. <br>
+                                <div class="text-center">
+                                    <img src="foto prodi/Teknik Mesin.png" alt="png" width="170px">
+                                  </div>
+                                <p align="center"><b><span style="color: blue;">Akreditasi Baik Sekali</span></b></p>
+                              </div>
+                              <div class="modal-footer">
+                                <a href="Akademik.html"><b><span style="color: blue;">Kembali</span></b></a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      
+                        <!-- Teknik Informatika -->
+                        <div class="col">
+                          <div class="card h-100 text-center clickable-card" data-bs-target="#modalTeknikInformatika" style="cursor: pointer;">
+                            <img src="foto prodi/Teknik Informatika.png" class="card-img-top" alt="Teknik Informatika" style="max-width: 180px; margin: 0 auto;">
+                            <div class="card-body">
+                              <h5 class="card-title">Teknik Informatika</h5>
+                            </div>
+                          </div>
+                        </div>
+                      
+                        
+                        <div class="modal fade" id="modalTeknikInformatika" tabindex="-1" aria-labelledby="modalLabelTeknikInformatika" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="modalLabelTeknikInformatika">Teknik Informatika</h5>
+                              </div>
+                              <div class="modal-body">
+                                Teknik Informatika adalah program studi yang mempelajari ilmu komputer, pemrograman, dan teknologi informasi untuk menghasilkan solusi teknologi inovatif.
+                                <div class="text-center">
+                                    <img src="foto prodi/Teknik Informatika.png" alt="png" width="170px">
+                                  </div>
+                                <p align="center"><b><span style="color: blue;">Akreditasi Unggul</span></b></p>  
+                            </div>
+                              <div class="modal-footer">
+                                <a href="Akademik.html"><b><span style="color: blue;">Kembali</span></b></a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      
+                        <!-- Teknik Elektro -->
+                        <div class="col">
+                          <div class="card h-100 text-center clickable-card" data-bs-target="#modalTeknikElektro" style="cursor: pointer;">
+                            <img src="foto prodi/Teknik Elektro.png" class="card-img-top" alt="Teknik Elektro" style="max-width: 180px; margin: 0 auto;">
+                            <div class="card-body">
+                              <h5 class="card-title">Teknik Elektro</h5>
+                            </div>
+                          </div>
+                        </div>
+                      
+                        
+                        <div class="modal fade" id="modalTeknikElektro" tabindex="-1" aria-labelledby="modalLabelTeknikElektro" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="modalLabelTeknikElektro">Teknik Elektro</h5>
+                              </div>
+                              <div class="modal-body">
+                                Teknik Elektro adalah program studi yang mempelajari teknologi dan penerapan sistem listrik serta elektronika dalam kehidupan.
+                                <div class="text-center">
+                                    <img src="foto prodi/Teknik Elektro.png" alt="png" width="170px">
+                                  </div>
+                                <p align="center"><b><span style="color: blue;">Akreditasi Baik Sekali</span></b></p>  
+                            </div>
+                              <div class="modal-footer">
+                                <a href="Akademik.html"><b><span style="color: blue;">Kembali</span></b></a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      
+                        <!-- Teknik Industri -->
+                        <div class="col">
+                          <div class="card h-100 text-center clickable-card" data-bs-target="#modalTeknikIndustri" style="cursor: pointer;">
+                            <img src="foto prodi/Teknik Industri.png" class="card-img-top" alt="Teknik Industri" style="max-width: 180px; margin: 0 auto;">
+                            <div class="card-body">
+                              <h5 class="card-title">Teknik Industri</h5>
+                            </div>
+                          </div>
+                        </div>
+                      
+                      
+                        <div class="modal fade" id="modalTeknikIndustri" tabindex="-1" aria-labelledby="modalLabelTeknikIndustri" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="modalLabelTeknikIndustri">Teknik Industri</h5>
+                              </div>
+                              <div class="modal-body">
+                                Teknik Industri adalah program studi yang mempelajari perancangan, pengelolaan, dan optimasi sistem industri dan proses bisnis.
+                                <div class="text-center">
+                                    <img src="foto prodi/Teknik Industri.png" alt="png" width="170px">
+                                  </div>
+                                <p align="center"><b><span style="color: blue;">Akreditasi Baik Sekali</span></b></p>  
+                            </div>
+                              <div class="modal-footer">
+                                <a href="Akademik.html"><b><span style="color: blue;">Kembali</span></b></a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      
+                        <!-- Fisika -->
+                        <div class="col">
+                          <div class="card h-100 text-center clickable-card" data-bs-target="#modalFisika" style="cursor: pointer;">
+                            <img src="foto prodi/Fisika.png" class="card-img-top" alt="Fisika" style="max-width: 180px; margin: 0 auto;">
+                            <div class="card-body">
+                              <h5 class="card-title">Fisika</h5>
+                            </div>
+                          </div>
+                        </div>
+                      
+              
+                        <div class="modal fade" id="modalFisika" tabindex="-1" aria-labelledby="modalLabelFisika" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="modalLabelFisika">Fisika</h5>
+                              </div>
+                              <div class="modal-body">
+                                Fisika adalah program studi yang mempelajari hukum-hukum alam dan penerapannya dalam teknologi dan kehidupan.
+                                <div class="text-center">
+                                    <img src="foto prodi/Fisika.png" alt="png" width="170px">
+                                  </div>
+                                <p align="center"><b><span style="color: blue;">Akreditasi Baik Sekali</span></b></p>  
+                            </div>
+                              <div class="modal-footer">
+                                <a href="Akademik.html"><b><span style="color: blue;">Kembali</span></b></a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <script>
+                        
+                        document.querySelectorAll('.clickable-card').forEach(card => {
+                          card.addEventListener('click', function () {
+                            const targetModal = this.getAttribute('data-bs-target');
+                            const modalElement = document.querySelector(targetModal);
+                            const modalInstance = new bootstrap.Modal(modalElement);
+                            modalInstance.show();
+                          });
+                        });
+                      </script>
+                 
+        </section><br>
+        
+
+
+        <section id="program-studi">
+          <div class="container">
+              <h3>Fakultas Sosial dan <span style="color: cadetblue;">Humaniora</span></h3><br>
+              <div class="row row-cols-1 row-cols-md-4 g-4"> 
+
+
+                <!--Psikologi-->
+                <div class="col">
+                    <div class="card h-100 text-center clickable-card" data-bs-target="#modalPsikologi" style="cursor: pointer;">
+                      <img src="foto prodi/Psikologi.png" class="card-img-top" alt="Psikologi" style="max-width: 180px; margin: 0 auto;">
+                      <div class="card-body">
+                        <h5 class="card-title">Psikologi</h5>
+                      </div>
+                    </div>
+                  </div>
+                
+                 
+                  <div class="modal fade" id="modalPsikologi" tabindex="-1" aria-labelledby="modalLabelPsikologi" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="modalLabelPsikologi">Psikologi</h5>
+                        </div>
+                        <div class="modal-body">
+                            Psikologi adalah ilmu yang mempelajari tentang perilaku dan proses mental manusia. Psikolog mempelajari 
+                            bagaimana manusia berpikir, merasa, dan berperilaku, serta faktor-faktor yang mempengaruhi perilaku tersebut.
+                          <div class="text-center">
+                            <img src="foto prodi/Psikologi.png" alt="png" width="170px">
+                          </div>
+                        <p align="center"><b><span style="color: blue;">Akreditasi Baik Sekali</span></b></p>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="Akademik.html"><b><span style="color: blue;">Kembali</span></b></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                
+                  <!-- Ilmu Komunikasi -->
+                  <div class="col">
+                    <div class="card h-100 text-center clickable-card" data-bs-target="#modalIlmuKomunikasi" style="cursor: pointer;">
+                      <img src="foto prodi/Ilmu Komunikasi.png" class="card-img-top" alt="Ilmu Komunikasi" style="max-width: 180px; margin: 0 auto;">
+                      <div class="card-body">
+                        <h5 class="card-title">Ilmu Komunikasi</h5>
+                      </div>
+                    </div>
+                  </div>
+                
+                 
+                  <div class="modal fade" id="modalIlmuKomunikasi" tabindex="-1" aria-labelledby="modalLabelIlmuKomunikasi" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="modalLabelIlmuKomunikasi">Ilmu Komunikasi</h5>
+                        </div>
+                        <div class="modal-body">
+                            Jurusan Ilmu Komunikasi adalah pilihan yang tepat bagi kamu yang ingin memahami lebih dalam tentang bagaimana manusia berkomunikasi dan ingin berkontribusi dalam dunia yang semakin terhubung. Dengan mempelajari ilmu komunikasi, kamu akan memiliki
+                             keterampilan yang sangat berguna untuk menghadapi tantangan di dunia kerja yang semakin kompleks.
+                          <div class="text-center">
+                            <img src="foto prodi/Ilmu Komunikasi.png" alt="png" width="170px">
+                          </div>
+                        <p align="center"><b><span style="color: blue;">Akreditasi Baik Sekali</span></b></p>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="Akademik.html"><b><span style="color: blue;">Kembali</span></b></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                
+                  <!-- Hukum -->
+                  <div class="col">
+                    <div class="card h-100 text-center clickable-card" data-bs-target="#modalHukum" style="cursor: pointer;">
+                      <img src="foto prodi/Hukum.png" class="card-img-top" alt="Hukum" style="max-width: 180px; margin: 0 auto;">
+                      <div class="card-body">
+                        <h5 class="card-title">Ilmu Hukum</h5>
+                      </div>
+                    </div>
+                  </div>
+                
+    
+                  <div class="modal fade" id="modalHukum" tabindex="-1" aria-labelledby="modalLabelHukum" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="modalLabelHukum">Ilmu Hukum</h5>
+                        </div>
+                        <div class="modal-body">
+                            Jurusan hukum adalah pilihan yang tepat bagi kamu yang memiliki minat dalam bidang hukum, suka menganalisis masalah, dan ingin berkontribusi dalam membangun masyarakat yang adil. 
+                            Dengan mempelajari hukum, kamu akan memiliki bekal yang kuat untuk menghadapi tantangan di masa depan.
+                          <div class="text-center">
+                            <img src="foto prodi/Hukum.png" alt="png" width="170px">
+                          </div>
+                        <p align="center"><b><span style="color: blue;">Akreditasi Baik Sekali</span></b></p>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="Akademik.html"><b><span style="color: blue;">Kembali</span></b></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                
+                  <!-- Administrasi Publik -->
+                  <div class="col">
+                    <div class="card h-100 text-center clickable-card" data-bs-target="#modalAdministrasiPublik" style="cursor: pointer;">
+                      <img src="foto prodi/Administrasi Publik.png" class="card-img-top" alt="Administrasi Publik" style="max-width: 180px; margin: 0 auto;">
+                      <div class="card-body">
+                        <h5 class="card-title">Administrasi Publik</h5>
+                      </div>
+                    </div>
+                  </div>
+                
+                 
+                  <div class="modal fade" id="modalAdministrasiPublik" tabindex="-1" aria-labelledby="modalLabelAdministrasiPublik" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="modalLabelAdministrasiPublik">Administrasi Publik</h5>
+                        </div>
+                        <div class="modal-body">
+                            Jurusan Administrasi Publik adalah pilihan yang tepat bagi kamu yang memiliki minat dalam bidang pemerintahan, ingin berkontribusi dalam pembangunan negara, dan memiliki jiwa kepemimpinan. Dengan mempelajari Administrasi Publik,
+                             kamu akan memiliki bekal yang kuat untuk menghadapi tantangan di dunia kerja yang semakin kompleks.
+                          <div class="text-center">
+                            <img src="foto prodi/Administrasi Publik.png" alt="png" width="170px">
+                          </div>
+                        <p align="center"><b><span style="color: blue;">Akreditasi Baik Sekali</span></b></p>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="Akademik.html"><b><span style="color: blue;">Kembali</span></b></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+                <script>
+                    document.querySelectorAll('.clickable-card').forEach(card => {
+                      card.addEventListener('click', function () {
+                        const targetModal = this.getAttribute('data-bs-target');
+                        const modalElement = document.querySelector(targetModal);
+                        const modalInstance = new bootstrap.Modal(modalElement);
+                        modalInstance.show();
+                      });
+                    });
+                  </script>
+                  
+        </section>
+
+        <section id="program-studi"><br>
+          <div class="container">
+              <h3>Fakultas <span style="color: yellowgreen;">Kedokteran</span></h3><br>
+              <div class="row row-cols-1 row-cols-md-4 g-4"> 
+                 <!-- Ilmu Kedokteran -->
+                 <div class="col">
+                    <div class="card h-100 text-center clickable-card" data-bs-target="#modalKedokteran" style="cursor: pointer;">
+                      <img src="foto prodi/Kedokteran.png" class="card-img-top" alt="Kedokteran" style="max-width: 180px; margin: 0 auto;">
+                      <div class="card-body">
+                        <h5 class="card-title">Ilmu Kedokteran</h5>
+                      </div>
+                    </div>
+                  </div>
+                
+    
+                  <div class="modal fade" id="modalKedokteran" tabindex="-1" aria-labelledby="modalLabelKedokteran" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="modalLabelKedokteran">Ilmu Kedokteran</h5>
+                        </div>
+                        <div class="modal-body">
+                            Jurusan kedokteran adalah pilihan yang tepat bagi Anda yang memiliki minat dalam bidang kesehatan, ingin membantu orang lain, dan siap menghadapi tantangan. Dengan mempelajari kedokteran, 
+                            Anda akan memiliki kesempatan untuk berkontribusi dalam meningkatkan kesehatan masyarakat.
+                          <div class="text-center">
+                            <img src="foto prodi/Kedokteran.png" alt="png" width="170px">
+                          </div>
+                        <p align="center"><b><span style="color: blue;">Akreditasi Unggul</span></b></p>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="Akademik.html"><b><span style="color: blue;">Kembali</span></b></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                
+                  <!-- Ilmu Keperawatan -->
+                  <div class="col">
+                    <div class="card h-100 text-center clickable-card" data-bs-target="#modalKeperawatan" style="cursor: pointer;">
+                      <img src="foto prodi/Ilmu Perawat.png" class="card-img-top" alt="Keperawatan" style="max-width: 180px; margin: 0 auto;">
+                      <div class="card-body">
+                        <h5 class="card-title">Ilmu Keperawatan</h5>
+                      </div>
+                    </div>
+                  </div>
+                
+                  <div class="modal fade" id="modalKeperawatan" tabindex="-1" aria-labelledby="modalLabelKeperawatan" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="modalLabelKeperawatan">Ilmu Keperawatan</h5>
+                        </div>
+                        <div class="modal-body">
+                            Jurusan keperawatan adalah pilihan yang tepat bagi Anda yang memiliki jiwa sosial yang tinggi, suka membantu orang lain, dan ingin berkontribusi dalam bidang kesehatan. Dengan mempelajari keperawatan, 
+                            Anda akan memiliki kesempatan untuk membuat perbedaan dalam kehidupan orang lain.
+                          <div class="text-center">
+                            <img src="foto prodi/Ilmu Perawat.png" alt="png" width="170px">
+                          </div>
+                        <p align="center"><b><span style="color: blue;">Akreditasi Unggul</span></b></p>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="Akademik.html"><b><span style="color: blue;">Kembali</span></b></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+                <script>
+                    document.querySelectorAll('.clickable-card').forEach(card => {
+                      card.addEventListener('click', function () {
+                        const targetModal = this.getAttribute('data-bs-target');
+                        const modalElement = document.querySelector(targetModal);
+                        const modalInstance = new bootstrap.Modal(modalElement);
+                        modalInstance.show();
+                      });
+                    });
+                  </script>
+        </section>
+
+        <section id="program-studi"><br>
+          <div class="container">
+              <h3>Fakultas Ekonomi dan <span style="color: darkgreen;">Bisnis</span></h3><br>
+              <div class="row row-cols-1 row-cols-md-4 g-4"> 
+                <!-- Manajemen -->
+                <div class="col">
+                    <div class="card h-100 text-center clickable-card" data-bs-target="#modalManajemen" style="cursor: pointer;">
+                      <img src="foto prodi/Manajemen.png" class="card-img-top" alt="Manajemen" style="max-width: 180px; margin: 0 auto;">
+                      <div class="card-body">
+                        <h5 class="card-title">Manajemen</h5>
+                      </div>
+                    </div>
+                  </div>
+                
+                  <div class="modal fade" id="modalManajemen" tabindex="-1" aria-labelledby="modalLabelManajemen" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="modalLabelManajemen">Manajemen</h5>
+                        </div>
+                        <div class="modal-body">
+                            Jurusan Manajemen adalah pilihan yang tepat bagi kamu yang memiliki minat dalam dunia bisnis, menyukai tantangan, dan ingin berkontribusi dalam pengembangan organisasi. Dengan mempelajari manajemen, 
+                            kamu akan memiliki bekal yang kuat untuk menjadi pemimpin yang sukses.
+                          <div class="text-center">
+                            <img src="foto prodi/Manajemen.png" alt="png" width="170px">
+                          </div>
+                        <p align="center"><b><span style="color: blue;">Akreditasi Unggul</span></b></p>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="Akademik.html"><b><span style="color: blue;">Kembali</span></b></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                
+                  <!-- Ekonomi -->
+                  <div class="col">
+                    <div class="card h-100 text-center clickable-card" data-bs-target="#modalEkonomi" style="cursor: pointer;">
+                      <img src="foto prodi/Ekonomi.png" class="card-img-top" alt="Ekonomi" style="max-width: 180px; margin: 0 auto;">
+                      <div class="card-body">
+                        <h5 class="card-title">Ekonomi</h5>
+                      </div>
+                    </div>
+                  </div>
+                
+                  <div class="modal fade" id="modalEkonomi" tabindex="-1" aria-labelledby="modalLabelEkonomi" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="modalLabelEkonomi">Ekonomi</h5>
+                        </div>
+                        <div class="modal-body">
+                            Jurusan ekonomi adalah pilihan yang tepat bagi kamu yang memiliki minat dalam dunia bisnis, keuangan, dan kebijakan publik. Dengan mempelajari ekonomi, 
+                            kamu akan memiliki bekal yang kuat untuk menghadapi tantangan di dunia kerja yang semakin kompleks.
+                          <div class="text-center">
+                            <img src="foto prodi/Ekonomi.png" alt="png" width="170px">
+                          </div>
+                        <p align="center"><b><span style="color: blue;">Akreditasi Baik Sekali</span></b></p>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="Akademik.html"><b><span style="color: blue;">Kembali</span></b></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                
+                  <!-- Akuntansi -->
+                  <div class="col">
+                    <div class="card h-100 text-center clickable-card" data-bs-target="#modalAkuntansi" style="cursor: pointer;">
+                      <img src="foto prodi/Akuntansi.png" class="card-img-top" alt="Akuntansi" style="max-width: 180px; margin: 0 auto;">
+                      <div class="card-body">
+                        <h5 class="card-title">Akuntansi</h5>
+                      </div>
+                    </div>
+                  </div>
+                
+                  <div class="modal fade" id="modalAkuntansi" tabindex="-1" aria-labelledby="modalLabelAkuntansi" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="modalLabelAkuntansi">Akuntansi</h5>
+                        </div>
+                        <div class="modal-body">
+                            Jurusan Akuntansi adalah pilihan yang tepat bagi kamu yang memiliki minat dalam angka, analisis data, dan dunia bisnis. Dengan mempelajari akuntansi,
+                             kamu akan memiliki bekal yang kuat untuk berkontribusi dalam keberhasilan suatu organisasi.
+                          <div class="text-center">
+                            <img src="foto prodi/Akuntansi.png" alt="png" width="170px">
+                          </div>
+                        <p align="center"><b><span style="color: blue;">Akreditasi Baik Sekali</span></b></p>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="Akademik.html"><b><span style="color: blue;">Kembali</span></b></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                
+                  <!-- Kewirausahaan -->
+                  <div class="col">
+                    <div class="card h-100 text-center clickable-card" data-bs-target="#modalKewirausahaan" style="cursor: pointer;">
+                      <img src="foto prodi/Kewirausahaan.png" class="card-img-top" alt="Kewirausahaan" style="max-width: 180px; margin: 0 auto;">
+                      <div class="card-body">
+                        <h5 class="card-title">Kewirausahaan</h5>
+                      </div>
+                    </div>
+                  </div>
+                
+
+                  <div class="modal fade" id="modalKewirausahaan" tabindex="-1" aria-labelledby="modalLabelKewirausahaan" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="modalLabelKewirausahaan">Kewirausahaan</h5>
+                        </div>
+                        <div class="modal-body">
+                            Jurusan Kewirausahaan adalah pilihan yang tepat bagi kamu yang memiliki semangat untuk menciptakan sesuatu yang baru, menyukai tantangan, dan ingin menjadi pemimpin. Dengan mempelajari kewirausahaan,
+                             kamu akan memiliki bekal yang kuat untuk meraih kesuksesan dalam dunia bisnis.
+                          <div class="text-center">
+                          <img src="foto prodi/Kewirausahaan.png" alt="png" width="170px">
+                        </div>
+                      <p align="center"><b><span style="color: blue;">Akreditasi Baik Sekali</span></b></p>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="Akademik.html"><b><span style="color: blue;">Kembali</span></b></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            
+
+                <script>
+                    document.querySelectorAll('.clickable-card').forEach(card => {
+                      card.addEventListener('click', function () {
+                        const targetModal = this.getAttribute('data-bs-target');
+                        const modalElement = document.querySelector(targetModal);
+                        const modalInstance = new bootstrap.Modal(modalElement);
+                        modalInstance.show();
+                      });
+                    });
+                  </script>
+        </section>
+
+      <div class="row mt-5">
+        <div class="col-md-12">
+          <h2>Kurikulum</h2>
+          <p>Kurikulum di Universitas Elang Kuasa dirancang untuk memastikan mahasiswa mendapatkan pengetahuan teoritis dan praktis yang seimbang. Kurikulum ini terus diperbarui sesuai dengan perkembangan ilmu pengetahuan dan teknologi.</p>
+        </div>
+      </div>
+
+      <div class="row mt-5">
+        <div class="col-md-12">
+          <h2>Fasilitas Akademik</h2>
+          <p>Universitas Elang Kuasa dilengkapi dengan fasilitas akademik yang modern, termasuk:</p>
+          <ul>
+            <li>Perpustakaan dengan koleksi buku dan jurnal terlengkap</li>
+            <li>Laboratorium penelitian di setiap fakultas</li>
+            <li>Ruang kelas yang nyaman dan dilengkapi dengan teknologi terkini</li>
+            <li>Fasilitas olahraga dan rekreasi untuk mendukung keseimbangan akademik dan non-akademik</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row mt-5">
+        <div class="col-md-12">
+          <h2>Kerjasama Internasional</h2>
+          <p>Universitas Elang Kuasa menjalin kerjasama dengan berbagai universitas dan institusi internasional untuk memberikan kesempatan kepada mahasiswa dalam pertukaran pelajar, penelitian, dan pengembangan karir.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <!-- Tentang Kami -->
+          <div class="footer-section">
+            <h3 class="footer-title">Tentang Kami</h3>
+            <p>
+              Universitas Elang Kuasa berkomitmen untuk memberikan pendidikan terbaik dan mempersiapkan mahasiswa menghadapi dunia global.
+            </p>
+          </div>
+    
+      
+          <div class="footer-section">
+            <h3 class="footer-title">Kontak</h3>
+            <p>Email: <a href="mailto:info@elangkuasa.ac.id">info@elangkuasa.ac.id</a></p>
+            <p>Telepon: <a href="">08154317957</a></p>
+          </div>
+    
+      
+          <div class="footer-section">
+            <h3 class="footer-title">Ikuti Kami</h3>
+            <div class="social-icons">
+              <a href="#" class="icon"><img src="foto icon/facebook.svg" alt="Facebook"></a>
+              <a href="#" class="icon"><img src="foto icon/twitter.svg" alt="Twitter"></a>
+              <a href="#" class="icon"><img src="foto icon/instagram.svg" alt="Instagram"></a>
+            </div>
+          </div>
+        </div>
+    
+        <div class="footer-bottom">
+          <p>© 2025 Hak Cipta Universitas Elang Kuasa. Semua Hak Dilindungi.</p>
+        </div>
+      </div>
+    </footer>
+    <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js' integrity='sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz' crossorigin='anonymous'></script>
+
+  </body>
+</html>
